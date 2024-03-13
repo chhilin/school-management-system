@@ -53,6 +53,7 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+        
 
         'mariadb' => [
             'driver' => 'mariadb',
