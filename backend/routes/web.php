@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
-Route::get('/', function () {
-    return view('Admin/AdminDashboardView');
-});
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
+
