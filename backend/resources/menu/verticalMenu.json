@@ -1,0 +1,22 @@
+{
+  "menu": [
+    {
+      "url": "/dashboard",
+      "name": "Dashboard",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "dashboard-analytics"
+    },
+    {
+      "url": "/user",
+      "name": "User",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": "user"
+    },
+    {
+      "url": "/students",
+      "name": "Students",
+      "icon": "menu-icon tf-icons bx bx-shape-polygon",
+      "slug": "students"
+    }
+  ]
+}
