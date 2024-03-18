@@ -30,3 +30,6 @@ Route::prefix('student')->group(function () use ($controller_path) {
     Route::delete('/delete/{id}', $controller_path . '\student\StudentController@destroy')->name('student.destroy');
     Route::get('/search', $controller_path . '\student\StudentController@search')->name('student.search');
 });
+// Route::get('/', function () {
+//     return view('welcome');
+// });
