@@ -61,10 +61,11 @@
     .openbtn{
         align-self: flex-start;
         width: 30px;
+        margin-top: 5px;
         margin-left: 20px;
     }
     #wrapper.toggled {
-        width: 250px;
+        width: 200px;
     }
 
     #sidebar-wrapper {
@@ -91,7 +92,6 @@
         margin: 0;
         margin-top: 30px;
         padding: 0;
-        height: 100;
         list-style: none;
     }
 
@@ -144,7 +144,7 @@
         }
 
         #wrapper.toggled #sidebar-wrapper {
-            width: 50px;
+            width: 150px;
         }
 
         #wrapper.toggled #page-content-wrapper {
