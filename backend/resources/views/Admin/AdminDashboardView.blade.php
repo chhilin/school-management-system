@@ -1,15 +1,12 @@
 <?php
-    $path = "C:/Users/Socheat/Desktop/school-management-system/backend/resources/views/partials/";
+    $viewsPath = config('paths.views');
+    include($viewsPath . 'HeaderView.blade.php');
+    include($viewsPath . 'NavBarView.blade.php');
+    // include($viewsPath . 'SideBarView.blade.php');
 
-    $header = $path . "HeaderView.blade.php";
-    $navbar = $path . "NavBarView.blade.php";
-    $sidebar = $path . "SideBarView.blade.php";
-    $footer = $path . "FooterView.blade.php";
-    include($header);
-    include($navbar);
-    include($sidebar);
+
 ?>
-<div class="container">
+<div class="container container-stype">
     <div>
         <h1 class="mt-2">Dashboard</h1>
     </div>
@@ -78,5 +75,5 @@
 </div>
 
 <?php 
-    include($footer);
+    include($viewsPath . 'FooterView.blade.php');
 ?>
