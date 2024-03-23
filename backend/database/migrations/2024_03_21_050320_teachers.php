@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
             $table->string('teacher_id');
+            $table->unsignedBigInteger('image_id')->nullable();
             $table->string('khmer_name');
             $table->string('english_name');
             $table->string('gender');
@@ -23,8 +24,9 @@ return new class extends Migration
             $table->string('email');
             $table->string('major');
             $table->string('employment_status');
-            $table->string('hire_date');
-            $table->string('image')->nullable();
+            $table->string('hire_date')->nullable();
+
+             $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
             $table->timestamps();
         });
     }

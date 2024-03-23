@@ -40,8 +40,8 @@ class StoreTeacherRequest extends FormRequest
             'email' =>'required|email',
             'major' =>'required',
             'employment_status' =>'required',
-            'hire_date' =>'required',
-            'image' => 'mimes:jpeg,png,jpg,gif|max:5048',
+            'hire_date' =>'',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
 
             // 'user_id' =>'required',
         ];
