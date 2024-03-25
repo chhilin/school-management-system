@@ -33,13 +33,13 @@ Route::prefix('student')->group(function () use ($controller_path) {
     Route::delete('/delete/{id}', $controller_path . '\student\StudentController@destroy')->name('student.destroy');
     Route::get('/search', $controller_path . '\student\StudentController@search')->name('student.search');
 });
-// Student
-Route::prefix('student')->group(function () use ($controller_path) {
-    Route::get('/', $controller_path . '\student\StudentController@index')->name('student.index');
-    Route::get('/create', $controller_path . '\student\StudentController@create')->name('student.create');
-    Route::post('/store', $controller_path . '\student\StudentController@store')->name('student.store');
-    Route::get('/edit/{id}', $controller_path . '\student\StudentController@edit')->name('student.edit');
-    Route::put('/update/{id}', $controller_path . '\student\StudentController@update')->name('student.update');
-    Route::delete('/delete/{id}', $controller_path . '\student\StudentController@destroy')->name('student.destroy');
-    Route::get('/search', $controller_path . '\student\StudentController@search')->name('student.search');
+// Faculty
+Route::prefix('faculty')->group(function () use ($controller_path) {
+    Route::get('/', $controller_path . '\faculty\FacultyController@index')->name('faculty.index');
+    Route::get('/create', $controller_path . '\faculty\FacultyController@create')->name('faculty.create');
+    Route::post('/store', $controller_path . '\faculty\FacultyController@store')->name('faculty.store');
+    Route::any('/edit/{id}', $controller_path . '\faculty\FacultyController@edit')->name('faculty.edit');
+    Route::any('/update/{id}', $controller_path . '\faculty\FacultyController@update')->name('faculty.update');
+    Route::delete('/delete/{id}', $controller_path . '\faculty\FacultyController@destroy')->name('faculty.destroy');
+    Route::get('/search', $controller_path . '\faculty\FacultyController@search')->name('faculty.search');
 });

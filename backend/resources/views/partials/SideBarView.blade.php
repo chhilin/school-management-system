@@ -3,10 +3,9 @@
 <div id="wrapper" class="toggled">
     <div id="sidebar-wrapper" class=" d-flex bg-light h-100">
         <!-- Sidebar Toggle Button -->
-        <button class="openbtn " id="menu-toggle" >☰</button>
         <ul class="sidebar-nav">
             <li>
-                <a href="/dashboard">Dashboard</a>
+                <a href="/admin">Dashboard</a>
             </li>
             <li>
                 <a href="/teacher-list">Teachers</a>
@@ -15,10 +14,7 @@
                 <a href="#">Students</a>
             </li>
             <li>
-                <a href="#">Students</a>
-            </li>
-            <li>
-                <a href="#">University</a>
+                <a href="/faculty">Faculty</a>
             </li>
             <li>
                 <a href="#">Short Curse</a>
