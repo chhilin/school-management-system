@@ -10,10 +10,7 @@
                 <a href="/teacher-list">Teachers</a>
             </li>
             <li>
-                <a href="#">Students</a>
-            </li>
-            <li>
-                <a href="#">Students</a>
+                <a href="/student">Students</a>
             </li>
             <li>
                 <a href="#">University</a>
@@ -49,16 +46,19 @@
 
     #wrapper.toggled {
         padding-left: 250px;
+
+        
     }
 
     #sidebar-wrapper {
         z-index: 1000;
         position: fixed;
-        left: 250px;
+        left: 200px;
         width: 0;
         height: 100%;
-        margin-left: -250px;
+        margin-left: -240px;
         overflow-y: auto;
+        /* background: #c72c48; */
         background: #ebe8e8;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
@@ -80,6 +80,9 @@
         position: absolute;
         margin-right: -250px;
     }
+   
+
+   
 
 
     /* Sidebar Styles */
@@ -92,10 +95,11 @@
         /* margin: 0; */
         padding: 0;
         list-style: none;
+        margin-right: 100px;
     }
 
     .sidebar-nav li {
-        text-indent: 20px;
+        text-indent: 100px;
         line-height: 40px;
     }
 

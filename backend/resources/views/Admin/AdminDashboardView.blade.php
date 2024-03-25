@@ -1,5 +1,5 @@
 <?php
-    $path = "C:/Users/Socheat/Desktop/school-management-system/backend/resources/views/partials/";
+    $path = "C:/Users/Dariya/Desktop/school-management-system/backend/resources/views/partials/";
 
     $header = $path . "HeaderView.blade.php";
     $navbar = $path . "NavBarView.blade.php";
