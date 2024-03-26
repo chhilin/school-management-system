@@ -2,7 +2,7 @@
 @include('partials.NavBarView')
 @include('partials.SideBarView')
 
-<div class="container" style="max-width: 100%;">
+<div class="container mr-5" style="max-width: 85%; ">
     <div class="card d-flex justify-content-end">
         <div class="card-header">
             <h5 class="fw-bold mb-0 d-flex justify-content-center align-items-center">Students List</h5>

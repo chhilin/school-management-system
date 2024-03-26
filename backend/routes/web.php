@@ -7,7 +7,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard')
 
 $controller_path = 'App\Http\Controllers';
 
-Route::redirect("/", "/dashboard");
+Route::redirect("/", "/admin");
 
 // Dashboard
 Route::get('/dashboard', $controller_path . '\dashboard\AnalyticsController@index')->name('dashboard-analytics');
