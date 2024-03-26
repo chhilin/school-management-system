@@ -30,16 +30,16 @@
                 <!-- =============== button add new and clear ============== -->
                 <div class="d-flex flex-row gap-2">
                     <!-- <button class="btn btn-light">Clear</button> -->
-                    <button class="btn btn-warning"> <a href="{{route('teachers.create')}}" class=" text-decoration-none text-dark">Add New</a> </button>
+                    <button class="btn btn-warning"> <a href="{{route('teachers.create')}}" class=" text-decoration-none text-dark">Add</a> </button>
                 </div>
             </div>
 
             <!-- =============table================================ -->
             <div class="my-4 mb-4">
                 <table class="table  table table-striped">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr class="text-center fs-7">
-                            <th scope="col">#</th>
+                            <!-- <th scope="col">#</th> -->
                             <th scope="col" class="">អត្តលេខ</th>
                             <th scope="col">រូបថត</th>
                             <th scope="col">ឈ្មោះជាភាសាខ្មែរ</th>
@@ -58,7 +58,7 @@
                     <tbody>
                         <?php foreach ($teachers as $teacher) :  ?>
                             <tr class="text-center">
-                                <td scope="row"><?php echo $teacher['id']; ?></td>
+                                <!-- <td scope="row"><?php echo $teacher['id']; ?></td> -->
                                 <td scope="row"><?php echo $teacher['teacher_id']; ?></td>
                                 <td>
                                     <img src="{{<?php echo $teacher['image_id']; ?>}}" alt="..">
