@@ -8,7 +8,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="mb-0 text-wrap">Are you sure you want to delete this Faculty?</p>
+                <p class="mb-0 text-wrap">តើអ្នកប្រាកដទេថាអ្នកចង់លុប <b>{{ $faculty->faculty_name}}</b> ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>

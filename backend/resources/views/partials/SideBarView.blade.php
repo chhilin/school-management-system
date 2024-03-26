@@ -8,7 +8,7 @@
                 <a href="/admin">Dashboard</a>
             </li>
             <li>
-                <a href="/teacher-list">Teachers</a>
+                <a href="/teachers/list">Teachers</a>
             </li>
             <li>
                 <a href="/student">Students</a>
@@ -59,7 +59,6 @@
         height: 100%;
         overflow-y: auto;
         flex-direction: column;
-        /* background: #cfcbcb; */
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
