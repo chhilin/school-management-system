@@ -11,7 +11,7 @@
                 <a href="/teacher-list">Teachers</a>
             </li>
             <li>
-                <a href="#">Students</a>
+                <a href="/student">Students</a>
             </li>
             <li>
                 <a href="/faculty">Faculty</a>
@@ -37,14 +37,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- Menu Toggle Script -->
-<script>
-    $(document).ready(function() {
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    });
-</script>
 <style>
     #wrapper {
         padding-left: 0;
@@ -54,12 +46,7 @@
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
-    .openbtn{
-        align-self: flex-start;
-        width: 30px;
-        margin-top: 5px;
-        margin-left: 20px;
-    }
+    
     #wrapper.toggled {
         width: 200px;
     }
@@ -92,7 +79,7 @@
     }
 
     .sidebar-nav li {
-        text-indent: 20px;
+        text-indent: 10px;
         line-height: 40px;
     }
 

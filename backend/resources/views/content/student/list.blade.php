@@ -1,31 +1,28 @@
-@extends('layouts/contentNavbarLayout')
+@include('partials.HeaderView')
+@include('partials.NavBarView')
+@include('partials.SideBarView')
 
-@section('title', 'Course List - UI elements')
-
-@section('vendor-script')
-<script src="{{ asset('assets/vendor/libs/masonry/masonry.js') }}"></script>
-@endsection
-<div class="card mb-4">
-    <div class="card-header">
-        <h5 class="fw-bold mb-0">Student List</h5>
-    </div>
-    <div class="card-body">
-        <form class="mb-3">
-            <div class="row">
-                <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                    <a href="{{ url('/') }}" class="btn btn-outline-secondary">
+<div class="container mr-5" style="max-width: 85%; ">
+    <div class="card d-flex justify-content-end">
+        <div class="card-header">
+            <h5 class="fw-bold mb-0 d-flex justify-content-center align-items-center">Students List</h5>
+        </div>
+        <form class="card-body mb-3 d-flex justify-content-end">
+            <div class="col-md-2">
+                <div class="col text-end mt-3 mt-md-0">
+                    <a href="{{ url('student') }}" class="btn btn-outline-secondary">
                         <i class="bx bx-refresh"></i> Clear
                     </a>
-                    <a href="student/create" class="btn btn-primary">
-                        <i class="bx bx-plus"></i> Add
+                    <a href="{{ url('student/create') }}" class="btn btn-primary">
+                        <i class="bx bx-plus"></i> New
                     </a>
                 </div>
             </div>
         </form>
-        <div class="table-responsive text-nowrap" id="containstudent">
-            @include('content.student.table')
-        </div>
-        <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="card-body">
+            <div class="d-flex justify-content-end" id="containstudent" style="max-width: 100%;">
+                @include('content.student.table')
+            </div>
         </div>
     </div>
 </div>
