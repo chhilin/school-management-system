@@ -11,7 +11,7 @@
             <h5 class="fw-bold mb-0">Unversity List</h5>
         </div>
         <div class="card-body">
-            <form class="mb-3">
+            <form class="mb-3" >
                 <div class="row">
                     <div class="col-md-6 text-md-end mt-3 mt-md-0">
                         <a href="{{ url('/') }}" class="btn btn-outline-secondary">
