@@ -71,25 +71,15 @@ class StudentController extends Controller
             return redirect('/student')->with('error', 'Failed to delete student.');
         }
     }
-    
+    public function search()
+    {
+        $search_text = $_GET['query'];
 
-//     public function destroy(string $id)
-//     {
-//     try {
-//         $student = Student::find($id);
-        
-//         if (!$student) {
-//             return redirect()->back()->with('error', 'Student not found');
-//         }
-
-//         $student->delete();
-
-//         return redirect()->back()->with('success', 'Student deleted successfully');
-//     } catch (\Exception $e) {
-//         // Log or display the error message
-//         Log::error($e->getMessage());
-//         return redirect()->back()->with('error', 'Failed to delete student');
-//     }
-// }
+        $students = Student::where('Student_ID', 'LIKE', '%' . $search_text . '%')
+            ->orWhere('Khmer_Name', 'LIKE', '%' . $search_text . '%')
+            ->orWhere('English_Name', 'LIKE', '%' . $search_text . '%')
+            ->get();
+        return view('content.student.list', compact('students'));
+    }
 
 }
