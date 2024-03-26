@@ -1,3 +1,4 @@
+
 <div class="d-flex">
 
     <div class=" bg-warning flex-1 " style="width: 234px; height: 100vh;">
@@ -56,12 +57,12 @@
                                 </button>
                             </td>
                         </tr>
-                        @php
+                        <!-- @php
                         $rowNumber++;
                         @endphp
                         @include('content.teacher.delete')
                         @include('content.teacher.view')
-                        @endforeach
+                        @endforeach -->
                     </tbody>
 
                     

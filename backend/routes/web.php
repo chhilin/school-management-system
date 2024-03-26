@@ -79,8 +79,10 @@ Route::get('teachers/create', [TeachersController::class, 'create'])->name('teac
 Route::post('/teachers/store', [TeachersController::class, 'store'])->name('teachers.store');
 Route::get('/teachers/search', [TeachersController::class, 'search'])->name('teachers.search');
 Route::delete('/teachers/{id}', [TeachersController::class, 'destroy'])->name('teachers.destroy');
-Route::get('/teachers/{id}/edit', [TeachersController::class, 'edit'])->name('teachers.edit');
-Route::put('/teachers/{id}', [TeachersController::class, 'update'])->name('teachers.update');
+// Route::get('/teachers/{id}/edit', [TeachersController::class, 'edit'])->name('teachers.edit');
+// Route::put('/teachers/{id}', [TeachersController::class, 'update'])->name('teachers.update');
+// Route::any('/edit/{id}', $controller_path . '\student\StudentController@update')->name('student.edit');
+Route::any('teachers/edit/{id}', [TeachersController::class, 'update'])->name('teachers.update');
 
 // Student
 // Route::prefix('student')->group(function () use ($controller_path) {

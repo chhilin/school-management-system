@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Teachers List</title>
-</head>
+@include('partials.HeaderView')
+@include('partials.NavBarView')
+<!-- @include('partials.SideBarView') -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
 
 <body>
     <div class="d-flex">
         <!-- ========== dashboad=========== -->
-        <!-- <div class=" bg-warning flex-1 " style="width: 234px; height: 100vh;">
-        </div> -->
+        <div class=" bg-warning flex-1 " style="width: 234px; height: 100vh;">
+        </div>
 
         <div class="mx-auto">
             <div class=" flex-2 d-flex  flex-column p-4 shadow my-5  mb-4">
@@ -59,8 +57,6 @@
                     </thead>
                     <tbody>
                         <?php foreach ($teachers as $teacher) :  ?>
-                            <!-- <?php echo $teacher['image_id'] ?> -->
-                            <img :src="{{<?php echo $teacher['image_id'] ?>}}" alt="<?php echo $teacher['image_id'] ?>">
                             <tr class="text-center">
                                 <td scope="row"><?php echo $teacher['id']; ?></td>
                                 <td scope="row"><?php echo $teacher['teacher_id']; ?></td>
@@ -82,7 +78,7 @@
                                     <div class="d-flex flex-row gap-2">
                                         <!-- <form action="">
                                             <button type="button" class="btn btn-primary"> -->
-                                            <a href="{{ route('teachers.edit', $teacher->id) }}" class="btn btn-primary text-white text-decoration-none">Edit</a>
+                                            <a href="{{ route('teachers.update', $teacher->id) }}" class="btn btn-primary text-white text-decoration-none">Edit</a>
                                             <!-- </button>
 
                                         </form> -->

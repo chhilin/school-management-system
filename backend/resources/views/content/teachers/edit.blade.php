@@ -11,10 +11,11 @@
 <body>
 
     <div class="d-flex container bg-light shadow p-4 my-5 h-auto">
-    <form method="POST" action="{{ route('teachers.update', $teacher->id) }}">
+    <!-- <form method="POST" action="{{ route('teachers.update', $teacher->id) }}"> -->
+    <form method="POST" action="{{ url('/teachers/edit',$teacher->id) }}" enctype="multipart/form-data">
             <!-- @csrf -->
             @csrf
-            <!-- @method('PUT') -->
+            @method('POST')
             <h1 class="fs-2 text-center text-warning">Update Teacher</h1>
 
             <div class="row mt-4">
@@ -32,7 +33,6 @@
 
                 <div class="col-md-6">
                     <label for="english_name" class="form-label">English Name:</label>
-                    <!-- <input type="text" value="{{ $teacher->english_?name }}" placeholder="Input English Name" class="form-control" name="english_name" id="english_name" required> -->
                     <input type="text" value="<?php echo $teacher['english_name']; ?>" placeholder="Input English Name" class="form-control" name="english_name" id="english_name" required>
                 </div>
 
@@ -112,7 +112,6 @@
 
 
 
-    <!-- <a href="{{ route('teachers.edit', ['id' => $teacher->id]) }}" class="text-white text-decoration-none">Edit</a> -->
 
 </body>
 
