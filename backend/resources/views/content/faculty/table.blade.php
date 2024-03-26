@@ -1,5 +1,5 @@
 <div class="" id="containfaculty" style="overflow-x: auto;">
-    <table class="table table-dark table-striped" style="width: 100%;">
+    <table class="table table-light table-striped" style="width: 100%;">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">អត្តលេខ</th>
