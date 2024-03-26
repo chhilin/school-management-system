@@ -1,7 +1,7 @@
 
 <!-- Sidebar -->
 <div id="wrapper" class="toggled">
-    <div id="sidebar-wrapper" class=" d-flex bg-light h-100">
+    <div id="sidebar-wrapper" class=" d-flex bg-white shadow h-100">
         <!-- Sidebar Toggle Button -->
         <ul class="sidebar-nav">
             <li>
@@ -59,7 +59,6 @@
         height: 100%;
         overflow-y: auto;
         flex-direction: column;
-        /* background: #cfcbcb; */
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
@@ -91,7 +90,7 @@
 
     .sidebar-nav li a:hover {
         text-decoration: none;
-        color: #fff;
+        color: #ffffff;
         background: #F4BC1C;
     }
 

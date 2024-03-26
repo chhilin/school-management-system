@@ -31,7 +31,7 @@
                     <tbody>
                         
                         @php
-                        $rowNumber = 1;
+                        $rowNumber = 0;
                         @endphp
                         @foreach ($teachers as $teacher)
                         <tr class="text-center">
