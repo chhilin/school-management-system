@@ -17,9 +17,9 @@ class CreateStudentsTable extends Migration
             $table->string('Khmer_Name')->nullable();
             $table->string('English_Name')->nullable();
             $table->string('Gender')->nullable();
-            $table->enum('College', ['IT', 'Sales and Marketing', 'Economy', 'English', 'Agriculture', 'Architect'])->nullable();
+            $table->string('College')->nullable();
             $table->string('Classroom')->nullable();
-            $table->string('Short_course')->nullable();
+            $table->string('Short_Course')->nullable();
             $table->string('English_level')->nullable();
             $table->string('IT_level')->nullable();
             $table->string('Working_team')->nullable();

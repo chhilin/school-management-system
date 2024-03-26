@@ -3,22 +3,18 @@
 <div id="wrapper" class="toggled">
     <div id="sidebar-wrapper" class=" d-flex bg-light h-100">
         <!-- Sidebar Toggle Button -->
-        <button class="openbtn " id="menu-toggle" >☰</button>
         <ul class="sidebar-nav">
             <li>
-                <a href="/dashboard">Dashboard</a>
+                <a href="/admin">Dashboard</a>
             </li>
             <li>
                 <a href="/teacher-list">Teachers</a>
             </li>
             <li>
-                <a href="#">Students</a>
+                <a href="/student">Students</a>
             </li>
             <li>
-                <a href="#">Students</a>
-            </li>
-            <li>
-                <a href="#">University</a>
+                <a href="/faculty">Faculty</a>
             </li>
             <li>
                 <a href="#">Short Curse</a>
@@ -41,14 +37,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- Menu Toggle Script -->
-<script>
-    $(document).ready(function() {
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    });
-</script>
 <style>
     #wrapper {
         padding-left: 0;
@@ -58,12 +46,7 @@
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
-    .openbtn{
-        align-self: flex-start;
-        width: 30px;
-        margin-top: 5px;
-        margin-left: 20px;
-    }
+    
     #wrapper.toggled {
         width: 200px;
     }
@@ -96,7 +79,7 @@
     }
 
     .sidebar-nav li {
-        text-indent: 20px;
+        text-indent: 10px;
         line-height: 40px;
     }
 

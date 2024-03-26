@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<div class="container-fluid d-flex align-items-center bg-dark text-light w-100 py-2 fixed-top">
+<div class="container-fluid d-flex align-items-center text-light w-100 py-2 fixed-top" style="background-color: black">
     <div class="nav-left mr-3">
         <img src="/DUC_profile.jpg" alt="Description of the image" style="width: 100px; height: 100px;">
     </div>
@@ -38,7 +38,4 @@
     }
     });
     </script>
-    <?php
-     $viewsPath = config('paths.views');
-     include($viewsPath . 'SideBarView.blade.php');
-    ?>
+   @include('partials.SideBarView')

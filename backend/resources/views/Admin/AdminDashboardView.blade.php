@@ -1,8 +1,6 @@
-<?php
-    $viewsPath = config('paths.views');
-    include($viewsPath . 'HeaderView.blade.php');
-    include($viewsPath . 'NavBarView.blade.php');
-?>
+@include('partials.HeaderView')
+@include('partials.NavBarView')
+@include('partials.SideBarView')
 <div class="container d-flex flex-column">
     <div>
         <h1 class="mt-2">Dashboard</h1>
@@ -75,6 +73,4 @@
         margin-left: 200px;
     }
 </style>
-<?php 
-    include($viewsPath . 'FooterView.blade.php');
-?>
+@include('partials.FooterView')
