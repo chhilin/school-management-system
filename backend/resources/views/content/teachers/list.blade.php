@@ -37,9 +37,9 @@
             <!-- =============table================================ -->
             <div class="my-4 mb-4">
                 <table class="table  table table-striped">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr class="text-center fs-7">
-                            <th scope="col">#</th>
+                            <!-- <th scope="col">#</th> -->
                             <th scope="col" class="">អត្តលេខ</th>
                             <th scope="col">រូបថត</th>
                             <th scope="col">ឈ្មោះជាភាសាខ្មែរ</th>
@@ -58,7 +58,7 @@
                     <tbody>
                         <?php foreach ($teachers as $teacher) :  ?>
                             <tr class="text-center">
-                                <td scope="row"><?php echo $teacher['id']; ?></td>
+                                <!-- <td scope="row"><?php echo $teacher['id']; ?></td> -->
                                 <td scope="row"><?php echo $teacher['teacher_id']; ?></td>
                                 <td>
                                     <img src="{{<?php echo $teacher['image_id']; ?>}}" alt="..">
