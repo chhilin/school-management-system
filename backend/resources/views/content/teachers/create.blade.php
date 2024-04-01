@@ -81,7 +81,7 @@
             </div>
             <div class="row mt-4">
                 <div class="d-flex justify-content-end gap-3">
-                    <button type="submit" class="btn btn-secondary "><a href="{{ route('teachers.list')}}" class="text-decoration-none text-white">Cancel</a> </button>
+                    <button type="submit" class="btn btn-secondary "><a href="{{ route('teachers.index')}}" class="text-decoration-none text-white">Cancel</a> </button>
                     <button type="submit" class="btn btn-warning ">Create</button>
                 </div>
             </div>

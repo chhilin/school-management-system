@@ -101,7 +101,7 @@
                 <div class="col-md-12 d-flex justify-content-end gap-2">
                     <!-- <button type="submit" class="btn btn-warning">Update Teacher</button> -->
                     <!-- <button type="submit" class="btn btn-primary">Save</button> -->
-                    <button class="btn btn-secondary"><a href="{{route('teachers.list')}}" class=" text-decoration-none text-white">Cancel</></button>
+                    <button class="btn btn-secondary"><a href="{{route('teachers.index')}}" class=" text-decoration-none text-white">Cancel</></button>
                     <button type="submit" class="btn btn-warning">Save</button>
 
 

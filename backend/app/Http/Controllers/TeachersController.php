@@ -15,7 +15,10 @@ class TeachersController extends Controller
     public function index()
     {
         $teachers = Teachers::all();
+        // $response = response()->json($teachers);
         return view('content.teachers.list', compact('teachers'));
+        // return view('content.teachers.list', ['teachers' => $teachers]);
+        // return response()->json($teachers);
     }
 
     // ========== create teacher ==========
@@ -44,8 +47,7 @@ class TeachersController extends Controller
         }
 
 
-        // return redirect()->route('teachers.list')->with('success', 'Teacher created successfully.');
-        return redirect()->route('teachers.list')->with('success', 'Teacher created successfully.');
+        return redirect()->route('teachers.index')->with('success', 'Teacher created successfully.');
     }
 
     public function create()
@@ -53,22 +55,6 @@ class TeachersController extends Controller
         return view('content.teachers.create');
     }
 
-    // public function edit($id)
-    // {
-    //     $teacher = Teachers::find($id);
-    //     return view('content.teachers.edit', compact('teacher'));
-    // }
-
-    // public function update(Request $request, $id)
-    // {
-    //     $teachers = Teachers::find($id);
-    //     // Update the teacher's information based on the request data
-    //     $teachers= Teachers::store($teachers);
-    //     $teachers->update();
-    //     dd($teachers);
-
-    //     return redirect()->route('teachers-list')->with('success', 'Teacher updated successfully');
-    // }
     
     // ===== update teacher =====
     public function update(Request $request, $id)
@@ -81,7 +67,7 @@ class TeachersController extends Controller
             try {
                 $teacher = Teachers::findOrFail($id);
                 $teacher->update($request->all());
-                return redirect('/teachers/list')->with('success', 'teacher has been updated successfully.');
+                return redirect('/teachers')->with('success', 'teacher has been updated successfully.');
             } catch (\Exception $e) {
                 // Log or display the error message
                 Log::error($e->getMessage());
