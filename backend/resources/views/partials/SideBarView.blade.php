@@ -1,25 +1,26 @@
-
 <!-- Sidebar -->
 <div id="wrapper" class="toggled">
     <div id="sidebar-wrapper" class=" d-flex bg-white shadow h-100">
         <!-- Sidebar Toggle Button -->
         <ul class="sidebar-nav">
             <li>
-                <a href="/admin">Dashboard</a>
+                <i class="material-icons">dashboard</i>
+                <a href="/admin"></i>Dashboard</a>
             </li>
             <li>
+                <i class="material-icons">record_voice_over</i>
                 <a href="/teachers/list">Teachers</a>
             </li>
             <li>
+                <i class="material-icons">supervisor_account</i>
                 <a href="/student">Students</a>
             </li>
             <li>
+                <i class="material-icons">local_library</i>
                 <a href="/faculty">Faculty</a>
             </li>
             <li>
-                <a href="#">Short Curse</a>
-            </li>
-            <li>
+                <i class="material-icons">person</i>
                 <a href="#">Users</a>
             </li>
         </ul>
@@ -46,7 +47,7 @@
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
-    
+
     #wrapper.toggled {
         width: 200px;
     }
@@ -72,13 +73,17 @@
         gap: 10px;
         width: 100%;
         margin: 0;
+        margin-left: 20px;
         margin-top: 30px;
         padding: 0;
         list-style: none;
     }
 
     .sidebar-nav li {
+        display: flex;
+        align-items: center;
         text-indent: 10px;
+        gap: 10px;
         line-height: 40px;
     }
 
@@ -88,7 +93,7 @@
         color: #000000;
     }
 
-    .sidebar-nav li a:hover {
+    .sidebar-nav li:hover {
         text-decoration: none;
         color: #ffffff;
         background: #F4BC1C;
@@ -133,9 +138,8 @@
             position: relative;
             margin-right: 0;
         }
-        .sidebar-nav{
-            
-        }
+
+        .sidebar-nav {}
     }
 
     /* For smaller screens */
