@@ -7,6 +7,7 @@
 
 
 <body>
+@section('content')
     <div class="d-flex">
         <!-- ========== dashboad=========== -->
         <div class=" bg-warning flex-1 " style="width: 234px; height: 100vh;">
@@ -36,7 +37,7 @@
 
             <!-- =============table================================ -->
             <div class="my-4 mb-4">
-                <table class="table  table table-striped">
+                <table class="table   table-striped">
                     <thead class="thead-dark">
                         <tr class="text-center fs-7">
                             <!-- <th scope="col">#</th> -->
@@ -55,7 +56,14 @@
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
+                    <!-- @foreach ($teachers as $teacher)
+                    <tr>
+                        <td>{{ $teacher->name }}</td>
+                        <td>{{ $teacher->email }}</td>
+                    </tr>
+                @endforeach -->
                         <?php foreach ($teachers as $teacher) :  ?>
                             <tr class="text-center">
                                 <!-- <td scope="row"><?php echo $teacher['id']; ?></td> -->

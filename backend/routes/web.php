@@ -9,6 +9,9 @@ $controller_path = 'App\Http\Controllers';
 Route::get('/', function () {
     return view('Admin/AdminDashboardView');
 });
+Route::get('/teachers/list', function () {
+    return view('teachers/list');
+});
 Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
 
@@ -28,6 +31,7 @@ Route::prefix('student')->group(function () use ($controller_path) {
     Route::get('/search', $controller_path . '\student\StudentController@search')->name('student.search');
 });
 
+// Route::get('/teachers/list', 'TeachersController@index')->name('teachers.list');
 Route::get('teachers/list', [TeachersController::class, 'index'])->name('teachers.list');
 Route::get('teachers/create', [TeachersController::class, 'create'])->name('teachers.create');
 Route::post('/teachers/store', [TeachersController::class, 'store'])->name('teachers.store');

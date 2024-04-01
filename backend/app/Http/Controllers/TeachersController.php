@@ -15,7 +15,10 @@ class TeachersController extends Controller
     public function index()
     {
         $teachers = Teachers::all();
-        return view('content.teachers.list', compact('teachers'));
+        // $response = response()->json($teachers);
+        // return view('content.teachers.list', compact('teachers'));
+        // return view('content.teachers.list', ['teachers' => $teachers]);
+        return response()->json($teachers);
     }
 
     // ========== create teacher ==========
