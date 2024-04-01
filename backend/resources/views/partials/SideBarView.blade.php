@@ -2,8 +2,6 @@
 <!-- Sidebar -->
 <div id="wrapper" class="toggled">
     <div id="sidebar-wrapper" class=" d-flex bg-light h-100">
-        <!-- Sidebar Toggle Button -->
-        <button class="openbtn " id="menu-toggle" >☰</button>
         <ul class="sidebar-nav">
             <li>
                 <a href="/dashboard">Dashboard</a>
@@ -14,17 +12,15 @@
             <li>
                 <a href="#">Students</a>
             </li>
-            <li>
-                <a href="#">Students</a>
-            </li>
+
             <li>
                 <a href="#">University</a>
             </li>
             <li>
-                <a href="#">Short Curse</a>
+                <a href="#">Users</a>
             </li>
             <li>
-                <a href="#">Users</a>
+                <a href="#">Account</a>
             </li>
         </ul>
     </div>
