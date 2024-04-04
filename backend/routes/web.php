@@ -27,6 +27,14 @@ Route::prefix('student')->group(function () use ($controller_path) {
     Route::delete('/delete/{id}', $controller_path . '\student\StudentController@destroy')->name('student.destroy');
     Route::get('/search', $controller_path . '\student\StudentController@search')->name('student.search');
 });
+Route::prefix('user')->group(function () use ($controller_path) {
+    Route::get('/', $controller_path . '\user\UserController@index')->name('user.index');
+    Route::get('/create', $controller_path . '\user\UserController@create')->name('user.create');
+    Route::post('/store', $controller_path . '\user\UserController@store')->name('user.store');
+    Route::any ('/edit/{id}', $controller_path . '\user\UserController@update')->name('user.edit');
+    Route::delete('/delete/{id}', $controller_path . '\user\UserController@destroy')->name('user.destroy');
+    Route::get('/search', $controller_path . '\user\UserController@search')->name('user.search');
+});
 
 Route::get('teachers/list', [TeachersController::class, 'index'])->name('teachers.list');
 Route::get('teachers/create', [TeachersController::class, 'create'])->name('teachers.create');

@@ -21,7 +21,7 @@
             </li>
             <li>
                 <i class="material-icons">person</i>
-                <a href="#">Users</a>
+                <a href="/user">Users</a>
             </li>
         </ul>
     </div>
