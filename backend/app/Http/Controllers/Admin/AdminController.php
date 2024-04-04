@@ -1,8 +1,7 @@
 <?php
 
-// namespace App\Http\Controllers\Admin;
+
 namespace App\Http\Controllers\Admin;
-// Controllers\Controller;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;

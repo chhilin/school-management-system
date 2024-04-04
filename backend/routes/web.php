@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\TeachersController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TeachersController;
+use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\Admin\AdminController;
 
 $controller_path = 'App\Http\Controllers';
@@ -44,5 +45,16 @@ Route::prefix('faculty')->group(function () use ($controller_path) {
     Route::any('/update/{id}', $controller_path . '\faculty\FacultyController@update')->name('faculty.update');
     Route::delete('/delete/{id}', $controller_path . '\faculty\FacultyController@destroy')->name('faculty.destroy');
     Route::get('/search', $controller_path . '\faculty\FacultyController@search')->name('faculty.search');
+
+});
+// User
+Route::prefix('auth')->group(function () use ($controller_path) {
+    Route::get('/', $controller_path . '\auth\UserController@index')->name('auth.index');
+    Route::get('/create', $controller_path . '\auth\UserController@create')->name('auth.create');
+    Route::post('/store', $controller_path . '\auth\UserController@store')->name('auth.store');
+    Route::any('/edit/{id}', $controller_path . '\auth\UserController@edit')->name('auth.edit');
+    Route::any('/update/{id}', $controller_path . '\auth\UserController@update')->name('auth.update');
+    Route::delete('/delete/{id}', $controller_path . '\auth\UserController@destroy')->name('auth.destroy');
+    Route::get('/search', $controller_path . '\auth\UserController@search')->name('auth.search');
 
 });
