@@ -8,7 +8,7 @@
                 <a href="/admin">Dashboard</a>
             </li>
             <li>
-                <a href="/teachers">Teachers</a>
+                <a href="/teacher">Teachers</a>
             </li>
             <li>
                 <a href="/student">Students</a>

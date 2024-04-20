@@ -1,29 +1,32 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\teacher;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTeacherRequest;
+use App\Http\Resources\TeacherResources;
 use App\Models\Image;
 use App\Models\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
 
-class TeachersController extends Controller
+class TeacherController extends Controller
 {
     // =========== get teachers ===========
     public function index()
     {
+        $teachers = Teachers::orderBy('created_at', 'desc')->get();
+        $teachersResources = TeacherResources::collection($teachers);
         $teachers = Teachers::all();
-        // $response = response()->json($teachers);
+
+        // $teachers = Teachers::orderBy('created_at', 'desc')->paginate();
         return view('content.teachers.list', compact('teachers'));
-        // return view('content.teachers.list', ['teachers' => $teachers]);
-        // return response()->json($teachers);
+        // return response()->json(['success' => true, 'data' => $teachers], 200);
     }
 
     // ========== create teacher ==========
 
-    // ...
+
 
     public function store(StoreTeacherRequest $request)
     {
@@ -55,7 +58,7 @@ class TeachersController extends Controller
         return view('content.teachers.create');
     }
 
-    
+
     // ===== update teacher =====
     public function update(Request $request, $id)
     {
@@ -67,7 +70,7 @@ class TeachersController extends Controller
             try {
                 $teacher = Teachers::findOrFail($id);
                 $teacher->update($request->all());
-                return redirect('/teachers')->with('success', 'teacher has been updated successfully.');
+                return redirect('/teacher')->with('success', 'teacher has been updated successfully.');
             } catch (\Exception $e) {
                 // Log or display the error message
                 Log::error($e->getMessage());

@@ -55,48 +55,36 @@
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <?php foreach ($teachers as $teacher) :  ?>
-                            <tr class="text-center">
-                                <!-- <td scope="row"><?php echo $teacher['id']; ?></td> -->
-                                <td scope="row"><?php echo $teacher['teacher_id']; ?></td>
-                                <td>
-                                    <img src="{{<?php echo $teacher['image_id']; ?>}}" alt="..">
-                                </td>
-                                <td scope="row"><?php echo $teacher['khmer_name']; ?></td>
-                                <td scope="row"><?php echo $teacher['english_name']; ?></td>
-                                <td scope="row"><?php echo $teacher['gender']; ?></td>
-                                <td scope="row"><?php echo $teacher['date_of_birth']; ?></td>
-                                <td scope="row"><?php echo $teacher['address']; ?></td>
-                                <td scope="row"><?php echo $teacher['phone_number']; ?></td>
-                                <td scope="row"><?php echo $teacher['email']; ?></td>
-                                <td scope="row"><?php echo $teacher['major']; ?></td>
-                                <td scope="row"><?php echo $teacher['employment_status']; ?></td>
-                                <td scope="row"><?php echo $teacher['hire_date']; ?></td>
-
-                                <td scope="row">
-                                    <div class="d-flex flex-row gap-2">
-                                        <!-- <form action="">
-                                            <button type="button" class="btn btn-primary"> -->
-                                        <a href="{{ route('teachers.update', $teacher->id) }}" class="btn btn-primary text-white text-decoration-none">Edit</a>
-                                        <!-- </button>
-
-                                        </form> -->
-                                        <!-- <button type="button" class="btn btn-danger">
-                                            <a href="" class="text-white text-decoration-none">Delete</a>
-                                        </button> -->
-
-                                        <form method="POST" action="{{ route('teachers.destroy', $teacher->id) }}" onsubmit="return confirm('Are you sure you want to delete this teacher?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                            <!-- <a href="{{route('teachers.destroy', $teacher->id)" class="btn btn-danger text-white text-decoration-none"> Delete</a> -->
-                                        </form>
-
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                        @foreach ($teachers as $teacher)
+                        <tr class="text-center">
+                            <td scope="row">{{ $teacher['teacher_id'] }}</td>
+                            <td>
+                                <img src="{{ $teacher['image_id'] }}" alt="..">
+                            </td>
+                            <td scope="row">{{ $teacher['khmer_name'] }}</td>
+                            <td scope="row">{{ $teacher['english_name'] }}</td>
+                            <td scope="row">{{ $teacher['gender'] }}</td>
+                            <td scope="row">{{ $teacher['date_of_birth'] }}</td>
+                            <td scope="row">{{ $teacher['address'] }}</td>
+                            <td scope="row">{{ $teacher['phone_number'] }}</td>
+                            <td scope="row">{{ $teacher['email'] }}</td>
+                            <td scope="row">{{ $teacher['major'] }}</td>
+                            <td scope="row">{{ $teacher['employment_status'] }}</td>
+                            <td scope="row">{{ $teacher['hire_date'] }}</td>
+                            <td scope="row">
+                                <div class="d-flex flex-row gap-2">
+                                    <a href="{{ route('teachers.edit', $teacher['id']) }}" class="btn btn-primary text-white text-decoration-none">Edit</a>
+                                    <form method="POST" action="{{ route('teachers.destroy', $teacher['id']) }}" onsubmit="return confirm('Are you sure you want to delete this teacher?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
