@@ -12,9 +12,11 @@
                     @csrf
                     <!-- Faculty name field -->
                     @include('content.faculty.from')
-                    
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <div class="d-flex gap-1 justify-content-end">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </div>
                 </form>
             </div>
         </div>

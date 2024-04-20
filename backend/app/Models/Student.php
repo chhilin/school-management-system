@@ -15,10 +15,11 @@ class Student extends Model
         'English_Name',
         'Gender',
         'College',
-        'Classroom',
+        'Department',
         'Short_Course',
         'English_level',
         'IT_level',
+        'Behavior',
         'Working_team',
     ];
 }

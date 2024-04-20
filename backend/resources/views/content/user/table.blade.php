@@ -1,43 +1,42 @@
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>N.o</th>
-            <th>UserName</th>
-            <th>Email</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody class="table-border-bottom-0">
-        @php
-        $rowNumber = 1;
-        @endphp
-        @foreach ($users as $user)
-        <tr>
-            <td>{{ $rowNumber }}</td>
-            <td>{{ $user->username }}</td>
-            <td>{{ $user->email }}</td>
-            <td>
-                <a href="{{ url('user/edit', ['id' => $user->id]) }}" class="btn btn-sm" style="background-color: #009DE1; color:white">
-                  <i class="bx bx-edit-alt me-1"></i> Edit
-                </a>
-                <button type="button" class="btn btn-sm" style="background-color: #E85252; color:white" data-bs-toggle="modal" data-bs-target="#confirmDelete{{ $user->id }}">
-                    <i class="bx bx-trash me-1"></i> Delete
-                </button>
-            </td>
-        </tr>
-        @include('content.user.delete')
-        @php
-        $rowNumber++;
-        @endphp
-        @endforeach
-    </tbody>
-</table>
-<!-- search ajax -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript">
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        }
-    });
-</script>
+<div class="table-responsive" id="containuser">
+    <table class="table  table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">អត្តលេខ</th>
+                <th scope="col">ឈ្មោះខ្មែរ</th>
+                <th scope="col">ឈ្មោះឡាតាំង</th>
+                <th scope="col">អាស័យដ្ធានអុីម៉ែល</th>
+                <th scope="col">សកម្មភាព</th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+            $rowNumber = 1;
+            @endphp
+            @foreach ($users as $user)
+            <tr>
+                <td>{{ $user->user_ID }}</td>
+                <td>{{ $user->Khmer_Name }}</td>
+                <td>{{ $user->English_Name }}</td>
+                <td>{{ $user->email }}</td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="{{ url('user/edit', $user->id) }}" class="btn btn-primary">
+                            <i class="bx bx-edit-alt me-1"></i> Edit
+                        </a>
+                        <form method="POST" action="{{ route('user.destroy', $user->id) }}" onsubmit="return confirm('Are you sure you want to delete this user?')">
+                            @csrf
+                            @method('Delete')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+
+            @php
+            $rowNumber++;
+            @endphp
+            @endforeach
+        </tbody>
+    </table>
+</div>

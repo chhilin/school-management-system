@@ -2,23 +2,29 @@
 @include('partials.NavBarView')
 @include('partials.SideBarView')
 
-<div class="container mr-5" style="max-width: 85%; ">
-    <div class="card d-flex justify-content-end">
-        <div class="card-header">
-            <h5 class="fw-bold mb-0 d-flex justify-content-center align-items-center">Students List</h5>
-        </div>
-        <form class="card-body mb-3 d-flex justify-content-end">
-            <div class="col-md-2">
-                <div class="col text-end mt-3 mt-md-0">
-                    <a href="{{ url('student') }}" class="btn btn-outline-secondary">
-                        <i class="bx bx-refresh"></i> Clear
-                    </a>
-                    <a href="{{ url('student/create') }}" class="btn btn-primary">
-                        <i class="bx bx-plus"></i> New
-                    </a>
+<div class="container mr-5" style="max-width: 85%;">
+    <div class="card mx-auto">
+        <div class="flex-2 d-flex flex-column p-4 shadow my-5 mb-4">
+            <h1 class="fs-2">បញ្ជីឈ្មោះសិស្ស</h1>
+            <form method="get" action="{{ route('student.search') }}" class="mb-3">
+                <div class="d-flex justify-content-between mt-4">
+                    <div class="col-sm-5 d-flex flex-row">
+                        <div class="input-group">
+                            <input type="search" name="query" class="form-control" placeholder="Search">
+                            <button class="btn btn-warning" type="submit">Search</button>
+                        </div>
+                    </div>
+                    <div class="col text-end mt-3 mt-md-0">
+                        <a href="{{ url('student') }}" class="btn btn-outline-secondary">
+                            <i class="bx bx-refresh"></i> Clear
+                        </a>
+                        <a href="{{ url('student/create') }}" class="btn btn-warning">
+                            <i class="bx bx-plus"></i> New
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
         <div class="card-body">
             <div class="d-flex justify-content-end" id="containstudent" style="max-width: 100%;">
                 @include('content.student.table')

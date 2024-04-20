@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         <div class="col-md-4 mt-5">
-            <a href="/student">
+            <a href="/student" class="list-group-item-action">
                 <div class="card">
                     <div class="card-body d-flex align-item-center justify-content-start" style="gap: 10px;">
                         <img src="{{ asset('student-icon.png') }}" alt="" style="width: 75px; height-75px">
@@ -17,7 +17,7 @@
             </a>
         </div>
         <div class="col-md-4 mt-5">
-            <a href="#">
+            <a href="/teachers/list" class="list-group-item-action">
                 <div class="card">
                     <div class="card-body d-flex align-item-center justify-content-start" style="gap: 10px;">
                         <img src="{{ asset('teacher-icon.jpg') }}" alt="" style="width: 75px; height: 75px;">
@@ -27,7 +27,7 @@
             </a>
         </div>
         <div class="col-md-4 mt-5">
-            <a href="#">
+            <a href="#" class="list-group-item-action">
                 <div class="card">
                     <div class="card-body d-flex align-item-center justify-content-start" style="gap: 10px;">
                         <img src="{{ asset('subject-icon.png') }}" alt="" style="width: 75px; height: 75px;">
@@ -37,7 +37,7 @@
             </a>
         </div>
         <div class="col-md-4 mt-5">
-            <a href="#">
+            <a href="#" class="list-group-item-action">
                 <div class="card">
                     <div class="card-body d-flex align-item-center justify-content-start" style="gap: 10px;">
                         <img src="{{ asset('classroom-icon.png') }}" alt="" style="width: 75px; height: 75px;">
@@ -47,17 +47,17 @@
             </a>
         </div>
         <div class="col-md-4 mt-5">
-            <a href="#">
+            <a href="/faculty" class="list-group-item-action">
                 <div class="card">
                     <div class="card-body d-flex align-item-center justify-content-start" style="gap: 10px;">
                         <img src="{{ asset('university-icon.png') }}" alt="" style="width: 75px; height: 75px;">
-                        <h4 class="mt-4">6 University</h4>
+                        <h4 class="mt-4">6 Faculty</h4>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col-md-4 mt-5">
-            <a href="#">
+            <a href="#" class="list-group-item-action">
                 <div class="card">
                     <div class="card-body d-flex align-item-center justify-content-start" style="gap: 10px;">
                         <img src="{{ asset('short-course-icon.png') }}" alt="" style="width: 75px; height: 75px">

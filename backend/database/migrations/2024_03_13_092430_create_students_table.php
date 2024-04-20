@@ -18,10 +18,11 @@ class CreateStudentsTable extends Migration
             $table->string('English_Name')->nullable();
             $table->string('Gender')->nullable();
             $table->string('College')->nullable();
-            $table->string('Classroom')->nullable();
+            $table->string('Department')->nullable();
             $table->string('Short_Course')->nullable();
             $table->string('English_level')->nullable();
             $table->string('IT_level')->nullable();
+            $table->string('Behavior')->nullable();
             $table->string('Working_team')->nullable();
             $table->timestamps();
         });

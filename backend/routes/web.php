@@ -50,6 +50,16 @@ Route::prefix('teacher')->group(function () use ($controller_path) {
 
 // Route::any('teachers/edit/{id}', [TeacherController::class, 'update'])->name('teachers.edit');
 
+Route::prefix('user')->group(function () use ($controller_path) {
+    Route::get('/', $controller_path . '\user\UserController@index')->name('user.index');
+    Route::get('/create', $controller_path . '\user\UserController@create')->name('user.create');
+    Route::post('/store', $controller_path . '\user\UserController@store')->name('user.store');
+    Route::any ('/edit/{id}', $controller_path . '\user\UserController@update')->name('user.edit');
+    Route::delete('/delete/{id}', $controller_path . '\user\UserController@destroy')->name('user.destroy');
+    Route::get('/search', $controller_path . '\user\UserController@search')->name('user.search');
+});
+
+
 
 // Faculty
 Route::prefix('faculty')->group(function () use ($controller_path) {

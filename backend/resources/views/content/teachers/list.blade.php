@@ -30,7 +30,7 @@
                 <!-- =============== button add new and clear ============== -->
                 <div class="d-flex flex-row gap-2">
                     <!-- <button class="btn btn-light">Clear</button> -->
-                    <button class="btn btn-warning"> <a href="{{route('teachers.create')}}" class=" text-decoration-none text-dark">Add New</a> </button>
+                    <button class="btn btn-warning"> <a href="{{route('teachers.create')}}" class=" text-decoration-none text-dark">Add</a> </button>
                 </div>
             </div>
 
