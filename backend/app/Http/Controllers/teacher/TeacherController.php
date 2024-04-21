@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Http\Controllers\API;
 namespace App\Http\Controllers\teacher;
 
 use App\Http\Controllers\Controller;
@@ -10,6 +11,7 @@ use App\Models\Teachers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
+
 class TeacherController extends Controller
 {
     // =========== get teachers ===========
@@ -19,9 +21,11 @@ class TeacherController extends Controller
         $teachersResources = TeacherResources::collection($teachers);
         $teachers = Teachers::all();
 
-        // $teachers = Teachers::orderBy('created_at', 'desc')->paginate();
+        $teachers = Teachers::orderBy('created_at', 'desc')->paginate();
         return view('content.teachers.list', compact('teachers'));
         // return response()->json(['success' => true, 'data' => $teachers], 200);
+
+
     }
 
     // ========== create teacher ==========

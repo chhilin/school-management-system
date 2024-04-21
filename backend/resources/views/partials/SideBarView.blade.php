@@ -8,9 +8,8 @@
                 <a href="/admin"></i>Dashboard</a>
             </li>
             <li>
-                <a href="/teacher">Teachers</a>
                 <i class="material-icons">record_voice_over</i>
-                <a href="/teachers/list">Teachers</a>
+                <a href="/teacher">Teachers</a>
             </li>
             <li>
                 <i class="material-icons">supervisor_account</i>

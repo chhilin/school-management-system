@@ -12,6 +12,7 @@ class TeacherController extends Controller
     public function index(){
         $data = Teachers::list();
         $data = TeacherResources::collection($data);
+        return Teachers::orderby('id', 'desc')->get();
 
         return response()->json(['success' => true, 'data' => $data], 200);
 
